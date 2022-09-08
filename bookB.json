@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Book",
+  "$id": "<TBZ>",
+  "description": "A book schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "description": "the title of the book",
+      "type": "String"
+    },
+    "pages": {
+      "description": "all pages of the book",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "siteNumber": {
+            "description": "specific page number",
+            "type": "integer"
+          },
+          "content": {
+            "description": "content of the page",
+            "type": "String"
+          }
+        }
+      }
+    },
+    "author": {
+      "description": "the author of the book",
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "description": "first name of the author",
+          "type": "String"
+        },
+        "lastName": {
+          "description": "last name of the author",
+          "type": "String"
+        }
+      }
+    },
+    "amountOfPages": {
+      "description": "total amount of pages",
+      "type": "integer"
+    }
+  }
+}

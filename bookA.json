@@ -1,0 +1,25 @@
+{
+  "$id": "<TBZ>",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Book",
+  "description": "A book schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "description": "the title of the book",
+      "type": "String"
+    },
+    "content": {
+      "description": "content of the book",
+      "type": "String"
+    },
+    "author": {
+      "description": "author of the book",
+      "type": "String"
+    },
+    "amountOfPages": {
+      "description": "total amount of pages",
+      "type": "integer"
+    }
+  }
+}

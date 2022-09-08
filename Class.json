@@ -1,0 +1,25 @@
+{
+  "$id": "<TBZ>",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Class",
+  "description": "A Class schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "the name of the Class",
+      "type": "String"
+    },
+    "Year": {
+      "description": "the year of the class",
+      "type": "object"
+    },
+    "ClassTeacher": {
+      "description": "author of the book",
+      "type": "object"
+    },
+    "students": {
+      "description": "total amount of pages",
+      "type": "object"
+    }
+  }
+}
