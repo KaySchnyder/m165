@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "user",
+  "$id": "<TBZ>",
+  "description": "A user schema",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "objectId"
+    },
+    "firstName": {
+      "description": "firstname of user",
+      "type": "string"
+    },
+    "follower": {
+      "description": "all followers",
+      "type": "array",
+      "items": {
+        "follower": {
+          "description": "all people who follow the user",
+          "type": "object",
+          "properties": {
+            "firstname": {
+              "description": "name of follower",
+              "type": "string"
+            },
+            "followerID": {
+              "description": "id of C",
+              "type": "objectID"
+            }
+          }
+        }
+      }
+    },
+    "following": {
+      "description": "all people who are followed by the user",
+      "type": "object",
+      "properties": {
+        "firstname": {
+          "description": "name of person",
+          "type": "string"
+        },
+        "followerID": {
+          "description": "id of person",
+          "type": "objectId"
+        }
+      }
+    },
+    "posts": {
+      "description": "all posts from user",
+      "type": "array",
+      "items": {
+        "pictures": {
+          "description": "pictures of post",
+          "type": "array",
+          "items": {
+            "description": "picture",
+            "type": "blob"
+          }
+        },
+        "comments": {
+          "description": "comments of post",
+          "type": "array",
+          "items": {
+            "comments": {
+              "description": "comment object",
+              "type": "object",
+              "properties": {
+                "username": {
+                  "description": "the user of the name",
+                  "type": "string"
+                },
+                "content": {
+                  "description": "content of the comment",
+                  "type": "string"
+                },
+                "subComment": {
+                  "description": "comment",
+                  "type": "array",
+                  "items": {
+                    "comments": {
+                      "description": "comment object",
+                      "type": "object",
+                      "properties": {
+                        "username": {
+                          "description": "the name of the user  ",
+                          "type": "string"
+                        },
+                        "content": {
+                          "description": "content of the comment",
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
